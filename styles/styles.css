@@ -9,7 +9,7 @@ body {
 
 /* Estilo del encabezado */
 header {
-    background-color: #7289da;
+    background-color: #83b883;
     padding: 10px;
     text-align: center;
 }
@@ -78,10 +78,11 @@ footer p {
 
 /* Estilo de enlaces */
 a {
-    color: #7289da;
+    color: #91e968;
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+    color:#e7b920;
 }
