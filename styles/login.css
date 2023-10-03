@@ -1,0 +1,77 @@
+
+
+
+/* Agregar imagen de fondo */
+body {
+    background-image: url('https://conceptodefinicion.de/wp-content/uploads/2016/09/Deporte2.jpg'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la URL de tu imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f200;
+    flex-wrap: wrap;
+}
+
+
+/* Estilos para los formularios */
+.form-container {
+    background-color: #074c5791;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 300px;
+    margin: 10px;
+    color: #e7e8f0;
+}
+
+/* Estilos adicionales para el formulario de registro */
+.register-container {
+    display: o;
+}
+
+/* Estilos para alternar entre el formulario de inicio de sesión y registro */
+.toggle-form-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #007BFF;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: block;
+}
+
+.toggle-form-button:hover {
+    color: #0056b3;
+}
+
+/* Estilos para los elementos del formulario */
+.input-container {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #4b539c;
+    border-radius: 3px;
+    background-color: #6b706b77; /* Cambiar a tu color deseado */
+    color: #080808;
+    font-weight: bold;
+}
