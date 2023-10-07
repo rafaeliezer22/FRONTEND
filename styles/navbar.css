@@ -103,9 +103,9 @@ body {
         opacity: 0;
     }
 
-    .menu.active .bar:last-child {
+     .menu.active .bar:last-child {
         transform: translateY(-7px) rotate(-45deg);
-    }
+    } 
 
     .menu {
         display: none;
@@ -114,7 +114,7 @@ body {
         top: 30px;
         left: 0;
         background-color: #2d3d3ab4;
-        width: 90%;
+        width: 100%;
         padding: 20px;
         z-index: 1;
     }
@@ -126,17 +126,21 @@ body {
     /* Estilos para los enlaces en el menú hamburguesa */
     .menu a {
         text-decoration: none;
-        color: #333; /* Cambiamos el color del texto a un tono más oscuro para mayor contraste */
-        padding: 10px 0px;
+        color: #fff; /* Cambiamos el color del texto a blanco */
+        padding: 5px 16px;
         margin: 12px;
         font-size: 15px;
-        text-align: center;
+        text-align: left;
         transition: background-color 0.3s, color 0.3s;
+        display: block;
+        width: 100px;
+        
     }
 
     /* Estilos al pasar el mouse sobre los enlaces del menú hamburguesa */
     .menu a:hover {
         background-color: #fff;
-        color: #0f2c09b4;
+        color: #000;
+
     }
 }
