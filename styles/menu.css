@@ -16,8 +16,10 @@
 
 .menu-content a:hover {
     background-color: #ddd;
+    color: green;
 }
 
 .menu-content.show {
     display: block;
+
 }

@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alquiler de Canchas de Fútbol</title>
+    <title>Reserva de Canchas</title>
     <link rel="stylesheet" href="../styles/reserva.css">
 </head>
 <body>
     <header>
-        <h1>Alquiler de Canchas de Fútbol</h1>
+        <h1>Reserva de Canchas</h1>
     </header>
     <main>
-        <section id="canchas">
-            <!-- Aquí se listarán las canchas disponibles -->
+        <section class="canchas-container">
+            <!-- Aqui vamos a mostrar la canchas disponibles -->
+        </section>
+
+        <!-- AQUI MOSTRAMOS LA INFO DE LA RESERVA -->
+        <section class="reserva-info">
+            <h2>Detalles de la Reserva</h2>
+            <p id="reserva-message"></p>
         </section>
     </main>
+
+    <!-- ventana modal ocultao -->
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <!-- Contenido de la ventana modal se generará dinámicamente en JavaScript -->
+        </div>
+
+    </div>
+    
+    
     <footer>
-        <p>&copy; 2023 Alquiler de Canchas de Fútbol</p>
+        <!-- ME GUSTO EL EJEMPLO DE CRIS Y LO AGREGAMOS EN EL FOOTER -->
+        <p>&copy; 2023 Reserva de Canchas</p>
     </footer>
     <script src="../scripts/reserva.js"></script>
+
+
+</div>
 </body>
 </html>
