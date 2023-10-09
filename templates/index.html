@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROYECTO CODO a CODO</title>
+    <!--Enlazar CSS de bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/torneos.css">
     <link rel="shortcut icon" href="../img/torneo-favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
         <h1>Complejo deportivo</h1>
+
     </header>
     
     <nav>
@@ -17,14 +20,47 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Acerca de</a></li>
             <li><a href="#">Servicios</a></li>
+            <li><a href="./reserva.html">Reservas</a></li>
             <li><a href="./torneos.html">Torneos</a></li>
+            <li><a href="./login.html">Iniciar sesion</a></li>
         </ul>
     </nav>
     
     <main>
-        
-
-
+        <section>
+            <!--Carousel con Boostrap-->
+            <div id="carouselComplejo" class="carousel slide">
+                
+                <div class="carousel-inner">
+                    <div class="texto_carousel">
+                        <h2>Nuestras canchas:</h2>
+                        <p>Uno de los complejos mas reconocidos del pais, ubicado estrategicamente.</p>
+                        <p>El Complejo cuenta con 5 canchas de polvo de ladrillo, 5 canchas de cesped sintetico profesional de futbol como de padel. Ademas contamos con restobar, estacionamiento privado y mucho verde para disfrutar del aire libre.</p>
+    
+                    </div>
+                    <div class="carousel-item active">
+                        <img src="../img/cancha futbol.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/cancha padel.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/cancha tenis.jpg" class="d-block w-100" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <iframe width="90%"height="400" src="https://www.youtube.com/embed/y-SKPDe_w08?si=pVkjR9b8vgOKnl2j&amp;start=30" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselComplejo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselComplejo" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
 
 
         <section>
@@ -38,7 +74,7 @@
             <ul>
                 <li>Alquiler de canchas</li>
                 <li>Torneos</li>
-                <li>Asadores</li>
+                <li>Restobar y estacionamiento</li>
             </ul>
         </section>
     </main>
@@ -46,6 +82,10 @@
     <footer>
         <p>Derechos de autor &copy; 2023 Mi Página Web</p>
     </footer>
+
+     <!--Enlazar JS de bootstrap-->
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     
 </body>
 </html>
