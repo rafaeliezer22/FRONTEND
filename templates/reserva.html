@@ -11,6 +11,24 @@
         <h1>Reserva de Canchas</h1>
     </header>
     <main>
+      <section class="formulario_reserva">
+            <!--Formulario de reserva-->
+            <form action="" >
+                <label for="f_reserva">Fecha de reserva:</label>
+                <input type="date" id="f_reserva" name="fecha_reserva" min="2023-10-01" max="2023-10-31" >
+        
+                <label for="t_reserva">Tipo de cancha:</label>
+                <select id="t_reserva" name="cancha_reserva">
+                    <option value="futbol">Futbol</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="padel">Padel</option>
+                </select>
+        
+                <input type="submit" value="Buscar canchas">
+            </form>
+
+        </section>
+         
         <section class="canchas-container">
             <!-- Aqui vamos a mostrar la canchas disponibles -->
         </section>

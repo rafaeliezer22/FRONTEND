@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url(../img/pasto_sintetico.jpg);
 }
 
 header {
@@ -91,4 +92,34 @@ footer {
 
 .modal-content button:hover {
     background-color: #0f7f7f;
+}
+
+/* Estilos de formulario de ingreso de busqueda reserva*/
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color: #31c7c7;
+    width:100%;
+    height: auto;
+    margin:10%;
+}
+
+form > #f_reserva, #t_reserva,input{
+   margin: 5px;
+   text-align: center;
+   font-size: 20px;
+   box-sizing: border-box;
+   padding: 10px;
+   font-weight: bold;
+}
+
+form > label{
+    color:black;
+    margin: 10px;
+    padding: 10px;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    box-sizing: border-box;
 }

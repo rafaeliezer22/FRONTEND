@@ -10,39 +10,60 @@
     <div class="container">
         <div class="form-container login-container">
             <h1>Iniciar Sesión</h1>
-            <form id="login-form">
+            <form id="login-form" autocomplete="off">
                 <div class="input-container">
-                    <label for="username">Usuario:</label>
-                    <input type="text" id="username" name="username" required>
+                    <input type="text" id="username" name="username" placeholder="Usuario" required>
                 </div>
                 <div class="input-container">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
                 </div>
-                <button type="submit">Ingresar</button>
+                <button type="submit" class= "team-button">Ingresar</button>
             </form>
-            <p class="toggle-form-text">¿No tienes una cuenta? <button class="toggle-form-button">Regístrate</button></p>
+            <p class="toggle-form-text">¿No tienes una cuenta? <button class="toggle-form-button-register">Regístrate</button></p>
         </div>
+
+        
         <div class="form-container register-container">
             <h1>Registro</h1>
-            <form id="register-form">
+            <form id="register-form" autocomplete="off">
+                <div class="error" id="error-username"></div>
                 <div class="input-container">
-                    <label for="register-username">Usuario:</label>
-                    <input type="text" id="register-username" name="register-username" required>
+                    <input type="text" id="register-username" name="register-username" placeholder="Usuario" required>
                 </div>
+
+                <div class="error" id="error-firstname"></div>
                 <div class="input-container">
-                    <label for="register-password">Contraseña:</label>
-                    <input type="password" id="register-password" name="register-password" required>
+                    <input type="text" name="firstname" id="register-firstname" placeholder="Nombre">
                 </div>
+
+                <div class="error" id="error-lastname"></div>
                 <div class="input-container">
-                    <label for="register-password">E-mail</label>
-                    <input type="email" id="register-email" name="register-email" required>
+                    <input type="text" name="lastname" id="register-lastname" placeholder="Apellido">
                 </div>
-                <button type="submit">Registrarse</button>
+                
+                <div class="error" id="error-email"></div>
+                <div class="input-container">
+                    <input type="email" name="email" id="register-email" placeholder="Email" required>
+                </div>
+
+                <div class="error" id="error-password"></div>
+                <div class="input-container">
+                    <input type="password" name="password" id="register-password" placeholder="Contraseña" required>
+                </div>
+                
+                <div class="error" id="error-birthdate"></div>
+                <div class="input-container">
+                    <label for="register-birthdate" id="label-date">Fecha de Nacimiento</label>
+                    <input type="date" name="birthdate" id="register-birthdate" placeholder="dd/mm/aaaa"onclick="hideLabel()">
+                </div>
+
+                <button type="submit" class= "team-button">Registrarse</button>
             </form>
-            <p class="toggle-form-text">¿Ya tienes una cuenta? <button class="toggle-form-button">Iniciar Sesión</button></p>
+            <p class="toggle-form-text">¿Ya tienes una cuenta? <button class="toggle-form-button-login">Iniciar Sesión</button></p>
         </div>
     </div>
-    <!-- <script src="../scripts/login.js"></script> -->
+    <script src="../scripts/login.js"></script>
+    <script src="../scripts/validation-register.js"></script>
+    
 </body>
 </html>
