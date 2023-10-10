@@ -153,3 +153,22 @@ a:hover {
     
 
 }
+
+/* Estilo de texto para carrusel */
+
+.carousel{
+    background-color: transparent;
+    border-radius: 5%;
+}
+
+.carousel-item.active,.carousel-item {
+    position: relative;
+}
+
+.carousel-item.active .texto_carousel{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-weight: bold;
+}
+
