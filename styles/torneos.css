@@ -167,8 +167,14 @@ a:hover {
 
 .carousel-item.active .texto_carousel{
     position: absolute;
-    bottom: 5%;
-    left: 5%;
+    bottom: 3%;
+    left: 3%;
+}
+
+#titulo_carousel{
+    font-size: 20px;
+    color: #fff;
     font-weight: bold;
+
 }
 

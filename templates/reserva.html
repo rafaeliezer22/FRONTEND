@@ -12,8 +12,9 @@
     </header>
     <main>
       <section class="formulario_reserva">
-            <!--Formulario de reserva-->
-            <form action="" >
+
+             <!--Formulario de carga administrador
+             <form action="" >
                 <label for="f_reserva">Fecha de reserva:</label>
                 <input type="date" id="f_reserva" name="fecha_reserva" min="2023-10-01" max="2023-10-31" >
         
@@ -23,8 +24,38 @@
                     <option value="tenis">Tenis</option>
                     <option value="padel">Padel</option>
                 </select>
+
+                <label for="n_cancha">Tipo de cancha:</label>
+                <select id="n_cancha" name="nombre_cancha">
+                    <option value="">Cancha1</option>
+                    <option value="">Cancha2</option>
+                    <option value="">Cancha3</option>
+                    <option value="">Cancha4</option>
+                </select>
+
+                <label for="e_reserva">Estado de reserva:</label>
+                <select id="e_reserva" name="estado_reserva">
+                    <option value="">Reservado</option>
+                    <option value="">Disponible</option>
+                    <option value="">Fuera de servicio</option>
+                </select>
         
                 <input type="submit" value="Buscar canchas">
+            </form>-->
+
+            <!--Formulario de reserva cliente-->
+            <form action="" >
+                <label for="f_reserva">Fecha de reserva:</label>
+                <input type="date" id="f_reserva" name="fecha_reserva" min="2023-10-01" max="2023-10-31" >
+        
+                <label for="t_reserva">Tipo de cancha:</label>
+                <select id="t_reserva" name="cancha_reserva">
+                    <option value="futbol">Fútbol</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="padel">Padel</option>
+                </select>
+        
+                <input id="b_cancha" type="submit" value="Buscar canchas">
             </form>
 
         </section>
