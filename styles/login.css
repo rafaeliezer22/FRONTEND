@@ -3,7 +3,7 @@
 
 /* Agregar imagen de fondo */
 body {
-    background-image: url('https://conceptodefinicion.de/wp-content/uploads/2016/09/Deporte2.jpg'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la URL de tu imagen de fondo */
+    background-image: url('../img/pasto_sintetico.jpg'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la URL de tu imagen de fondo */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
 
 /* Estilos para los formularios */
 .form-container {
-    background-color: #074c5791;
+    background-color: #121213b9;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
@@ -34,20 +34,24 @@ body {
     color: #e7e8f0;
 }
 
-/* Estilos adicionales para el formulario de registro */
-.register-container {
-    display: o;
+.login-container {
+    display: none;
 }
 
-/* Estilos para alternar entre el formulario de inicio de sesión y registro */
-.toggle-form-button {
+.register-container {
+    display: none;
+}
+
+
+
+/* Estilos para blockalternar entre el formulario de inicio de sesión y registro */
+.toggle-form-button-register, .toggle-form-button-login {
     background-color: transparent;
     border: none;
     cursor: pointer;
     color: #007BFF;
     text-decoration: underline;
     margin-top: 10px;
-    display: block;
 }
 
 .toggle-form-button:hover {
@@ -60,11 +64,6 @@ body {
     text-align: left;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
 
 input {
     width: 90%;
@@ -74,4 +73,55 @@ input {
     background-color: #6b706b77; /* Cambiar a tu color deseado */
     color: #080808;
     font-weight: bold;
+}
+
+.error{
+    color: red;
+    font-size: small;
+
+}
+
+.form-control input.error, .form-select.error{
+    border: 2px solid red; 
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Ajusta la posición horizontal según tus preferencias */
+    transform: translateY(-50%);
+    color: #888; /* Cambia el color del texto para que parezca un marcador de posición */
+    pointer-events: none; /* Evita que la etiqueta interfiera con la interacción del usuario */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+}
+
+.input-container input:focus + label,
+.input-container input:valid + label {
+    transform: translateY(-150%) scale(0.8);
+    opacity: 0.8;
+}
+
+#register-birthdate{
+    color: rgba(0, 0, 0, 0);
+}
+
+
+.team-button:hover {
+    background-color: #4bc213; /* Cambia a un color diferente al pasar el cursor */
+    color: white;
+    transition: background-color 0.3s ease;
+}
+.team-button {
+    background-color: #4ac21370; /* Color del equipo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
 }
