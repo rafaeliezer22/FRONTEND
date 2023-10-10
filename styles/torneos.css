@@ -85,6 +85,7 @@ nav ul li a {
 /* Estilo de la sección principal */
 main {
     padding: 20px;
+    flex: 1;
 }
 
 section {
@@ -109,6 +110,9 @@ footer {
     background-color: #23272a;
     padding: 10px;
     text-align: center;
+    position:sticky;
+    bottom: 0;
+    width: 100%;
 }
 
 footer p {
@@ -118,14 +122,24 @@ footer p {
 
 /* Estilo de enlaces */
 a {
-    color: #91e968;
+    color: white;
+    text-decoration: none;
+}
+
+/*torneo_en_juego*/
+
+.link_torneo_en_juego {
+    display: inline;
+    margin-right: 20px;
+    float: right;
     text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration:dashed;
     color:#e7b920;
 }
+
 
 @media screen and (max-width: 500px) {
     .div_img_medianas {
