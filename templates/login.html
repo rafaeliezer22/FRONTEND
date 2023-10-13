@@ -5,8 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login y Registro con Animaciones</title>
     <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../styles/navbar.css">
 </head>
 <body>
+    <header>
+        <h1>Complejo deportivo-La Redonda</h1>
+
+    </header>
+    
+    <nav  class="navbar">
+        <div class="menu-toggle" id="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="./reserva.html">Reservas</a></li>
+            <li><a href="./torneos.html">Torneos</a></li>
+            <li><a href="./login.html">Iniciar sesion</a></li>
+
+        </ul>
+    </nav>
+
     <div class="container">
         <div class="form-container login-container">
             <h1>Iniciar Sesión</h1>
@@ -33,12 +57,12 @@
 
                 <div class="error" id="error-firstname"></div>
                 <div class="input-container">
-                    <input type="text" name="firstname" id="register-firstname" placeholder="Nombre">
+                    <input type="text" name="firstname" id="register-firstname" placeholder="Nombre" required>
                 </div>
 
                 <div class="error" id="error-lastname"></div>
                 <div class="input-container">
-                    <input type="text" name="lastname" id="register-lastname" placeholder="Apellido">
+                    <input type="text" name="lastname" id="register-lastname" placeholder="Apellido" required>
                 </div>
                 
                 <div class="error" id="error-email"></div>
@@ -62,8 +86,13 @@
             <p class="toggle-form-text">¿Ya tienes una cuenta? <button class="toggle-form-button-login">Iniciar Sesión</button></p>
         </div>
     </div>
+
+    <footer>
+        <p>Derechos de autor &copy; 2023 Mi Página Web</p>
+    </footer>
     <script src="../scripts/login.js"></script>
     <script src="../scripts/validation-register.js"></script>
+    <script src="../scripts/navbar.js"></script>
     
 </body>
 </html>

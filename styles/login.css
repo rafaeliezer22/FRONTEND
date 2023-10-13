@@ -1,14 +1,58 @@
 
 
 
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #36393f; 
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
 /* Agregar imagen de fondo */
 body {
-    background-image: url('../img/pasto_sintetico.jpg'); /* Reemplaza 'tu_imagen_de_fondo.jpg' con la URL de tu imagen de fondo */
+    background-image: url('../img/pasto_sintetico.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
 }
+
+/* Estilo del encabezado */
+header {
+    background-color: #83b8839d;
+    padding: 10px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #fff;
+}
+
+/* Estilo de la barra de navegación
+nav {
+    background-color: #23272af8;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+} */
 
 .container {
     display: flex;
@@ -41,7 +85,6 @@ body {
 .register-container {
     display: none;
 }
-
 
 
 /* Estilos para blockalternar entre el formulario de inicio de sesión y registro */
@@ -124,4 +167,16 @@ input {
     padding: 10px 20px;
     font-size: 12px;
     text-transform: uppercase;
+}
+
+/* Estilo del pie de página */
+footer {
+    background-color: #23272a;
+    padding: 10px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
 }

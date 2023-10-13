@@ -1,21 +1,6 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-image: url('https://conceptodefinicion.de/wp-content/uploads/2016/09/Deporte2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-} 
-
-/* 'https://conceptodefinicion.de/wp-content/uploads/2016/09/Deporte2.jpg' */
 
 .navbar {
-    background-color: #13cca45b;
+    background-color: #121312f1;
     color: #fff;
     display: flex;
     align-items: center;
@@ -29,12 +14,12 @@ body {
     cursor: pointer;
 }
 
-/* .bar {
+.bar {
     background-color: #fff;
     height: 3px;
     width: 25px;
     margin: 3px 0;
-} */
+}
 
 
 .menu li {
@@ -54,30 +39,31 @@ body {
 
 
 .menu a {
-    background-color: rgba(243, 243, 243, 0);
+    background-color: #ffffff00;
     text-decoration: none;
     color: #a5a0a0;
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 7px 20px;
+    font-size: 15px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .menu a:hover {
-    background-color: rgba(55, 104, 194, 0.685); /* Fondo con transparencia al pasar el mouse */
-    color: #e3e9e2b4; /* Cambia el color del texto al pasar el mouse */
-    border-color: rgba(252, 250, 250, 0.6); /* Borde más claro al pasar el mouse */
+    background-color: #706b6bd8; /* Fondo con transparencia al pasar el mouse */
+    color: #ffffff; /* Cambia el color del texto al pasar el mouse */
+    border-color: rgba(43, 147, 216, 0.836); /* Borde más claro al pasar el mouse */
+
 }
 
 
 /* Estilos para el menú hamburguesa cuando se muestra */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .navbar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
-        background-color: #31c7c786;
+        /* background-color: #31c7c786; */
         color: #fff;
     }
 
@@ -111,10 +97,10 @@ body {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 30px;
+        top: 79px;
         left: 0;
-        background-color: #2d3d3ab4;
-        width: 100%;
+        background-color: #2d3d3ac9;
+        width: 130px;
         padding: 20px;
         z-index: 1;
     }
@@ -128,16 +114,88 @@ body {
         text-decoration: none;
         color: #fff; /* Cambiamos el color del texto a blanco */
         padding: 5px 16px;
-        margin: 12px;
-        font-size: 15px;
+        margin: 5px;
+        font-size: 13px;
         text-align: left;
         transition: background-color 0.3s, color 0.3s;
         display: block;
-        width: 100px;
+        width: 80px;
+        background-color: #ffffff8e;
         
     }
 
     /* Estilos al pasar el mouse sobre los enlaces del menú hamburguesa */
+    .menu a:hover {
+        background-color: #fff;
+        color: #000;
+
+    }
+}
+
+@media screen and (max-width: 500px)  and (orientation: portrait){
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        color: #fff;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .bar {
+        background-color: #c2c2c2;
+        height: 3px;
+        width: 25px;
+        margin: 3px 0;
+        transition: transform 0.3s ease;
+    }
+
+    .menu.active .bar:first-child {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+     .menu.active .bar:last-child {
+        transform: translateY(-7px) rotate(-45deg);
+    } 
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 107px;
+        left: 0;
+        background-color: #2d3d3ac9;
+        width: 130px;
+        padding: 20px;
+        z-index: 1;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: #fff; 
+        padding: 5px 16px;
+        margin: 5px;
+        font-size: 13px;
+        text-align: left;
+        transition: background-color 0.3s, color 0.3s;
+        display: block;
+        width: 80px;
+        background-color: #ffffff8e;
+        
+    }
     .menu a:hover {
         background-color: #fff;
         color: #000;
