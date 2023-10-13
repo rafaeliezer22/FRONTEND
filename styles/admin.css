@@ -1,18 +1,27 @@
+/* Estilos generales */
+body {
+    background-image: url('../img/pasto_sintetico.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+}
 
+/* Estilos para contenedores */
 .addCanchaForm,
-.cancha-card {
+.cancha-card,
+.container-profile {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin: 10px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.51);
     display: inline-block;
 }
 
-.modal-content button,
-.addCanchaForm button,
-.cancha-card button {
+/* Estilos para botones */
+button {
     background-color: #007BFF;
     color: #fff;
     border: none;
@@ -20,35 +29,42 @@
     padding: 5px 10px;
     cursor: pointer;
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
-.modal-content button:hover,
-.addCanchaForm button:hover,
-.cancha-card button:hover {
+button:hover {
     background-color: #0056b3;
 }
 
-
-/* Estilos para la ventana modal */
-.modal {
+/* Estilos para ventanas modales */
+.modal,
+.modal-p {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    z-index: 1;
+}
+
+.modal {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content {
-    background-color: #fff;
+.modal-p {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content,
+.modal-content-p {
     margin: 10px auto;
     padding: 10px;
     border: 1px solid #888;
-    width: 200px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    background-color: transparent;
 }
 
 .close {
@@ -56,27 +72,87 @@
     float: right;
     font-size: 20px;
     font-weight: bold;
+    background-color: #000000d5;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .close:hover {
-    color: #fc0404;
+    color: #005092;
     cursor: pointer;
+    background-color: #000000;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-
-.modal-content h3{
-    margin: 15px;
-    padding: 0;
-
-
+/* Estilos para campos de entrada de texto */
+input[type="email"],
+input[type="text"] {
+    border: 1px solid #7289da;
+    width: 50%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: #36393fea;
+    color: #ffffff;
 }
 
-.modal-content input{
+/* Estilos para imágenes redondas */
+.imagen-redonda {
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    border: 2px solid #eccb0d;
+}
+
+/* Estilos para filas de imágenes */
+.image-container {
+    background-color: rgba(197, 11, 11, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Estilos para botones en ventana modal */
+#avatarButton {
     margin-bottom: 15px;
-    padding: 0;
-    display: inline-block;
-
 }
 
+.modal-content-p h3 {
+    background-color: rgba(114, 137, 218, 0);
+    color: #ffffff;
+    padding: 4px 0;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    width: 90%;
+}
 
+/* Estilos para alinear elementos en contenedores */
+.input-container {
+    text-align: left;
+}
 
+label {
+    display: inline-block;
+    width: 100px;
+}
+
+input {
+    display: inline-block;
+}

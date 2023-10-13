@@ -98,4 +98,22 @@ function guardarEdicion() {
 // Función para cerrar la ventana modal.
 function cerrarModal() {
     document.getElementById("modal").style.display = "none";
+
+}
+
+function profile() {
+    // const canchas = JSON.parse(localStorage.getItem('canchas')) || [];
+    // const cancha = canchas[index];
+    
+    // Llena los campos de la ventana modal con los valores actuales.
+    // document.getElementById("nuevoNombre").value = cancha.nombre;
+    // document.getElementById("nuevoPrecio").value = cancha.precio;
+    
+    // Muestra la ventana modal.
+    document.querySelector(".modal-profile").style.display = "block";  
+    
+}
+
+function cerrarModalProfile() {
+    document.querySelector(".modal-profile").style.display = "none";  
 }
