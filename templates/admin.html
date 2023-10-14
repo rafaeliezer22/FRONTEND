@@ -54,8 +54,11 @@
                         </div>
                     </div>
 
-                    <img src="https://th.bing.com/th/id/OIP._Hz-hVaYc9a520yIO78ddwHaHT?pid=ImgDet&rs=1"
-                        alt="Imagen de Perfil" id="imagen_perfil" class="imagen-redonda" name="ruta_imagen_perfil">
+                    <div class="imagen">
+
+                        <img src="https://th.bing.com/th/id/OIP._Hz-hVaYc9a520yIO78ddwHaHT?pid=ImgDet&rs=1"
+                            alt="Imagen de Perfil" id="imagen_perfil" class="imagen-redonda" name="ruta_imagen_perfil">
+                    </div>
 
                     <div class="form-group">
                         <label for="username">User Name:</label>
@@ -88,15 +91,34 @@
 
 
                 </form>
+
+                <div id="modal-clave" class="modal-clave" style="display: none;">
+                    <div class="modal-content-clave">
+                        <span class="close-clave" id="closeClave">&times;</span>
+                        <h3>Cambiar Contraseña</h3>
+                        <form id="cambiar-clave-form">
+                            <label for="nuevaclave">Nueva Contraseña:</label>
+                            <input type="password" id="nuevaclave" name="nuevaclave" required>
+
+                            <label for="confirmacion">Confirmar Contraseña:</label>
+                            <input type="password" id="confirmacion" name="confirmacion" required>
+
+                            <button type="button" id="guardarClave">Guardar Contraseña</button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
     <div class="modal-content-p">
-        <h1>CRUD de Canchas</h1>
+        <span class="close" id="closeProfile" onclick="">⊗</span>
+
 
         <form id="addCanchaForm">
             <div class="addCanchaForm">
+                <h1>Agregar cancha</h1>
 
                 <div>
                     <label>Nombre:</label>
@@ -108,6 +130,24 @@
                 </div>
 
                 <button type="button" onclick="agregarCancha()"> Agregar Cancha </button>
+            </div>
+
+        </form>
+
+        <form id="addCanchaForm">
+            <div class="addCanchaForm">
+                <h1>buscador cancha</h1>
+
+                <div>
+                    <label>Nombre:</label>
+                    <input type="text" id="nombreCancha" placeholder="nombre Cancha" class="input-container" required>
+                </div>
+                <div class="form-group">
+                    <label>Precio:</label>
+                    <input type="text" id="precioCancha" placeholder="precio Cancha" class="input-container" required>
+                </div>
+
+                <button type="button" onclick="agregarCancha()"> Buscar </button>
             </div>
 
         </form>
@@ -141,21 +181,6 @@
         </div>
 
 
-        <div id="modal-clave" class="modal-clave" style="display: none;">
-            <div class="modal-content-clave">
-                <span class="close-clave" id="closeClave">&times;</span>
-                <h3>Cambiar Contraseña</h3>
-                <form id="cambiar-clave-form">
-                    <label for="nuevaclave">Nueva Contraseña:</label>
-                    <input type="password" id="nuevaclave" name="nuevaclave" required>
-
-                    <label for="confirmacion">Confirmar Contraseña:</label>
-                    <input type="password" id="confirmacion" name="confirmacion" required>
-
-                    <button type="button" id="guardarClave">Guardar Contraseña</button>
-                </form>
-            </div>
-        </div>
 
 
 

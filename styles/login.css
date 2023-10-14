@@ -58,16 +58,16 @@ nav ul li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100vh; 
     margin: 0;
-    background-color: #f2f2f200;
     flex-wrap: wrap;
+
 }
 
 
 /* Estilos para los formularios */
 .form-container {
-    background-color: #121213b9;
+    background-color: #121213d2;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
@@ -111,15 +111,25 @@ nav ul li a {
 input {
     width: 90%;
     padding: 10px;
-    border: 1px solid #4b539c;
+    border: 1px solid #7289da;
     border-radius: 3px;
-    background-color: #6b706b77; /* Cambiar a tu color deseado */
+    background-color: #36393fea; 
     color: #080808;
+    /* color: #ffffff; */
     font-weight: bold;
 }
 
+
 .error{
+    /* background-color: #00000096; */
     color: red;
+    font-size: small;
+
+}
+
+.exito{
+    /* background-color: #00000096; */
+    color: rgba(52, 170, 29, 0.842);
     font-size: small;
 
 }
@@ -153,12 +163,11 @@ input {
     color: rgba(0, 0, 0, 0);
 }
 
-
-.team-button:hover {
-    background-color: #4bc213; /* Cambia a un color diferente al pasar el cursor */
-    color: white;
-    transition: background-color 0.3s ease;
+.input-container{
+    font-size: small;
 }
+
+
 .team-button {
     background-color: #4ac21370; /* Color del equipo */
     color: white;
@@ -168,7 +177,11 @@ input {
     font-size: 12px;
     text-transform: uppercase;
 }
-
+.team-button:hover {
+    background-color: #4bc213; /* Cambia a un color diferente al pasar el cursor */
+    color: white;
+    transition: background-color 0.3s ease;
+}
 /* Estilo del pie de página */
 footer {
     background-color: #23272a;

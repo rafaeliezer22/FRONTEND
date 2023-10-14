@@ -18,6 +18,7 @@ const validationForm = (event) => {
     const errorEmail = document.querySelector("#error-email");
     const errorPassword = document.querySelector("#error-password");
     const errorBirthdate = document.querySelector("#error-birthdate");
+    
 
     let validation = true;
 
@@ -81,12 +82,14 @@ const validationForm = (event) => {
 
     if(validation){
         registerform.submit();
+        addUser();
+        const exito = document.querySelector("#exito-usuario");
+        exito.textContent='Usuario creado exitosamente';
+
     }
 }
 
 registerform.addEventListener('submit',validationForm);
-
-
 
 
 function hideLabel() {
@@ -95,4 +98,35 @@ function hideLabel() {
  
     var input = document.querySelector("#register-birthdate");
     input.style.color = "black";
+}
+
+function addUser(){
+
+    const username = document.querySelector("#register-username").value;
+    const firtsname = document.querySelector('#register-firstname').value;
+    const lastname = document.querySelector('#register-lastname').value;
+    const email = document.querySelector("#register-email").value;
+    const password = document.querySelector("#register-password").value;
+    const birthdate = document.querySelector("#register-birthdate").value;
+
+    // Recuperar usuarios existentes del localStorage
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+    // Crear un nuevo usuario
+    const nuevoUsuario = {
+    username: username,
+    clave: password,
+    avatar: '../img/avatar/guest-300x300.webp',
+    nombre: firtsname,
+    apellido: lastname,
+    email: email,
+    fn: birthdate,
+    rol: 'cliente',
+    };
+
+    // Agregar el nuevo usuario al arreglo existente
+    usuarios.push(nuevoUsuario);
+
+    // Guardar el arreglo actualizado en localStorage
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
 }

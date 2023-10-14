@@ -156,3 +156,10 @@ label {
 input {
     display: inline-block;
 }
+
+.imagen {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+  }

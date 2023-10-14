@@ -35,9 +35,11 @@
         <div class="form-container login-container">
             <h1>Iniciar Sesión</h1>
             <form id="login-form" autocomplete="off">
+                <div class="error" id="error-user"></div>
                 <div class="input-container">
                     <input type="text" id="username" name="username" placeholder="Usuario" required>
                 </div>
+                <div class="error" id="error-pass"></div>
                 <div class="input-container">
                     <input type="password" id="password" name="password" placeholder="Contraseña" required>
                 </div>
@@ -48,6 +50,7 @@
 
         
         <div class="form-container register-container">
+            <div class="exito" id="exito-usuario"></div>
             <h1>Registro</h1>
             <form id="register-form" autocomplete="off">
                 <div class="error" id="error-username"></div>
