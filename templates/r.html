@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cancha</title>
+</head>
+<body>
+    <h1>Reservar Cancha</h1>
+    <form id="reserva-form">
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required><br>
+
+        <label for="cancha">Cancha:</label>
+        <select id="cancha" required>
+            <option value="Futbol1">Fútbol 1</option>
+            <option value="Futbol2">Fútbol 2</option>
+            <option value="Futbol3">Fútbol 3</option>
+            <option value="Futbol4">Fútbol 4</option>
+            <option value="Padel1">Pádel 1</option>
+            <option value="Padel2">Pádel 2</option>
+        </select><br>
+
+        <label for="horario">Horario:</label>
+        <input type="time" id="horario" required><br>
+
+        <button type="submit">Reservar</button>
+    </form>
+</body>
+<script src="../scripts/r.js"></script>
+</html>

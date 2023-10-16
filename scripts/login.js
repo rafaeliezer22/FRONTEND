@@ -21,55 +21,46 @@ if (!localStorage.getItem('usuarios')) {
   }
 
 
-
-document.getElementById('login-form').addEventListener('submit', function (e) {
+  document.getElementById('login-form').addEventListener('submit', function (e) {
     e.preventDefault();
-  
+
     const username = document.querySelector("#username").value;
     const password = document.querySelector("#password").value;
-  
+
     // Recuperamos los usuarios almacenados en el localStorage
     const usuariosJSON = localStorage.getItem('usuarios');
     const usuarios = JSON.parse(usuariosJSON);
-  
+
     // Verificamos si existe un usuario con el nombre de usuario proporcionado
     const usuarioEncontrado = usuarios.find(user => user.username === username);
-  
+
     if (usuarioEncontrado) {
-      // Comparamos la contraseña ingresada con la contraseña del usuario encontrado
-      if (usuarioEncontrado.clave === password) {
-        // Inicio de sesión exitoso
-        alert('¡Inicio de sesión exitoso!\nBienvenido, ' + usuarioEncontrado.nombre);
-        // deberia ver lo de sessionstorage,, modificar el
-        //navbar para que oculte el iniciar y muestre un logaut
-        //preguntar siempre por el logaut para la carga de la pagina
-        //es decir que si la session esta abierta se debe redireccion y no entrar al login.
-      
-        if (usuarioEncontrado.rol === 'administrador') {
-          console.log('pagina administrador');
+        // Comparamos la contraseña ingresada con la contraseña del usuario encontrado
+        if (usuarioEncontrado.clave === password) {
+            // Inicio de sesión exitoso
+            alert('¡Inicio de sesión exitoso!\nBienvenido, ' + usuarioEncontrado.nombre);
 
-        } else if (usuarioEncontrado.rol === 'cliente') {
-          console.log('pagina cliente');
+            // Guarda al usuario en la sesión actual
+            sessionStorage.setItem("usuarioLogeado", JSON.stringify(usuarioEncontrado));
 
+            // Redirige al usuario a la página deseada después del inicio de sesión.
+            if (usuarioEncontrado.rol === 'administrador') {
+                window.location.href = 'pagina-admin.html';
+            } else if (usuarioEncontrado.rol === 'cliente') {
+                window.location.href = 'pagina-cliente.html';
+            }
+        } else {
+            // Contraseña incorrecta
+            const errorPass = document.querySelector("#error-pass");
+            errorPass.textContent = 'Contraseña incorrecta. Inténtalo de nuevo.';
         }
-      
-
-        // Aquí puedes redirigir al usuario a la página deseada después del inicio de sesión.
-      } else {
-        // Contraseña incorrecta
-        const errorPass = document.querySelector("#error-pass");
-        errorPass.textContent='Contraseña incorrecta. Inténtalo de nuevo.';
-        // alert('Contraseña incorrecta. Inténtalo de nuevo.');
-        
-      }
     } else {
-      // Usuario no encontrado
-      const errorUser = document.querySelector("#error-user");
-      errorUser.textContent='Usuario no encontrado.Regístrate si eres nuevo.';
-    //   alert('Usuario no encontrado. Regístrate si eres nuevo.');
+        // Usuario no encontrado
+        const errorUser = document.querySelector("#error-user");
+        errorUser.textContent = 'Usuario no encontrado. Regístrate si eres nuevo.';
     }
-  });
-  
+});
+
   
   
 

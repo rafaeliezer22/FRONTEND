@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú Hamburguesa</title>
-    <link rel="stylesheet" href="../styles/navbar.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menú Hamburguesa</title>
+        <link rel="stylesheet" href="../styles/navbar.css">
+    </head>
 <body>
     <div class="navbar">
         <div class="menu-toggle" id="menu-toggle">
@@ -17,8 +17,13 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Productos</a></li>
             <li><a href="#">Carrito</a></li>
-            <li><a href="login.html">Iniciar Sesión</a></li>
-            <li><a href="#">Registrarse</a></li>
+            <li><a id="loginLink" href="login.html">Iniciar Sesión</a></li>
+            <li><a id="registerLink" href="#">Registrarse</a></li>
+            <div id="userSection" style="display: none;">
+                <li><img id="userAvatar" src="" alt="Avatar"></li>
+                <li><span id="userName"></span></li>
+                <li><button id="logoutButton">Logout</button></li>
+            </div>
         </ul>
     </div>
     <div class="content">

@@ -1,6 +1,6 @@
 
 .navbar {
-    background-color: #121312f1;
+    background-color: #4c4c4ef1;
     color: #fff;
     display: flex;
     align-items: center;
@@ -55,6 +55,37 @@
 
 }
 
+
+/* Estilo para la imagen de perfil redondeada */
+#userAvatar {
+    border-radius: 5%;
+    width: 30px; /* Ajusta el ancho y alto según tus necesidades */
+    height: 30px;
+    margin-top: 0px;
+    padding-top: 0px;
+    
+}
+
+/* Estilo para el botón de logout */
+#logoutButton {
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#userName {
+    margin-top: 10px;
+    padding-top: 0px;
+
+    color: #a5a0a0;
+}
+.userSection{
+    display: none;
+    margin: 0;
+    padding: 0;
+
+}
 
 /* Estilos para el menú hamburguesa cuando se muestra */
 @media screen and (max-width: 767px) {
@@ -130,6 +161,33 @@
         color: #000;
 
     }
+
+    #userAvatar {
+        border-radius: 50%;
+        width: 40px; 
+        height: 40px;
+        margin-top: 15px;
+        margin-left: 15px;
+        padding: 5px 16px;
+    }
+
+    #userName {
+        display:none;
+    }
+
+    #logoutButton {
+        background-color: #f00;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+
+        margin-left: 15px;
+        padding: 5px 16px;
+    }
+    
+
+
 }
 
 @media screen and (max-width: 500px)  and (orientation: portrait){
@@ -201,4 +259,5 @@
         color: #000;
 
     }
+
 }

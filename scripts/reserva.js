@@ -7,6 +7,41 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 4, nombre: "Cancha 4", precio: 25, disponible: true },
     ];
 
+    const horariosDisponibles = {
+        "2023-10-16": {
+            "Futbol1": [
+                "09:00",
+                "10:00",
+                "14:00",
+                // Agrega más horarios disponibles para esta cancha de fútbol
+            ],
+            "Futbol2": [
+                "11:00",
+                "15:00",
+                // Agrega más horarios disponibles para esta cancha de fútbol
+            ],
+            "Futbol3": [
+                // Horarios disponibles para la tercera cancha de fútbol
+            ],
+            "Futbol4": [
+                // Horarios disponibles para la cuarta cancha de fútbol
+            ],
+            "Padel1": [
+                "10:00",
+                "12:00",
+                "16:00",
+                // Agrega más horarios disponibles para esta cancha de pádel
+            ],
+            "Padel2": [
+                "11:00",
+                "14:00",
+                // Agrega más horarios disponibles para esta cancha de pádel
+            ]
+        },
+        // Agrega más fechas con sus respectivos horarios disponibles
+    };
+    
+
     const canchasContainer = document.querySelector(".canchas-container");
     const reservaMessage = document.getElementById("reserva-message");
     const modal = document.getElementById("modal");
