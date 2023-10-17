@@ -59,15 +59,15 @@
             </form>-->
 
             <!--Formulario de reserva cliente-->
-            <form action="" >
+            <form action="" id="formulario_busqueda" >
                 <label for="f_reserva">Fecha de reserva:</label>
                 <input type="date" id="f_reserva" name="fecha_reserva" min="2023-10-01" max="2023-10-31" >
             
                 <label for="t_reserva">Tipo de cancha:</label>
                 <select id="t_reserva" name="cancha_reserva">
-                    <option value="Fútbol">Fútbol</option>
-                    <option value="Tenis">Tenis</option>
-                    <option value="Padel">Padel</option>
+                    <option value="Fútbol" onkeyup="filtrarPorTipoCancha()">Fútbol</option>
+                    <option value="Tenis" onkeyup="filtrarPorTipoCancha()">Tenis</option>
+                    <option value="Padel" onkeyup="filtrarPorTipoCancha()">Padel</option>
                 </select>
                 <input id="b_cancha" type="submit" value="Buscar canchas">
             </form>
