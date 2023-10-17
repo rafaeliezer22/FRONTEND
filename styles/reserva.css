@@ -59,6 +59,22 @@ nav ul li a {
     color: #fff;
 }
 
+/* Estilo del pie de página */
+footer {
+    background-color: #23272a;
+    padding: 10px;
+    text-align: center;
+    position:sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
 /* Estilos para las tarjetas de las canchas */
 .cancha-card {
     border: 1px solid #ccc;
