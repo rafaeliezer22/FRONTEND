@@ -65,11 +65,11 @@
             
                 <label for="t_reserva">Tipo de cancha:</label>
                 <select id="t_reserva" name="cancha_reserva">
-                    <option value="Fútbol" onkeyup="filtrarPorTipoCancha()">Fútbol</option>
-                    <option value="Tenis" onkeyup="filtrarPorTipoCancha()">Tenis</option>
-                    <option value="Padel" onkeyup="filtrarPorTipoCancha()">Padel</option>
+                    <option value="Fútbol">Fútbol</option>
+                    <option value="Tenis">Tenis</option>
+                    <option value="Padel">Padel</option>
                 </select>
-                <input id="b_cancha" type="submit" value="Buscar canchas">
+                <input id="b_cancha" type="submit" value="Buscar canchas" onclick="filtrarPorTipoCancha()">
             </form>
 
         </section>

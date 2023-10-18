@@ -24,10 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let reservaCancha = null; // Almacena la cancha reservada actualmente
 
     // Función para mostrar las canchas en la página
-    function mostrarCanchas() {
+    function mostrarCanchas(lista) {
         canchasContainer.innerHTML = "";
 
-        canchasData.forEach(cancha => {
+        lista.forEach(cancha => {
             const canchaCard = document.createElement("div");
             canchaCard.classList.add("cancha-card");
 
@@ -87,9 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "none";
     }
 
-    // Llamamos a la función para mostrar las canchas al cargar la página
-    mostrarCanchas();
-
     //accedemos a los elementos del DOM
     const fecha = document.querySelector("#f_reserva");
     const tipo_cancha =document.querySelector("#t_reserva");
@@ -108,24 +105,33 @@ document.addEventListener("DOMContentLoaded", function () {
        if (validation) {
         //si esta ok la validacion almacenamos los datos en el servidor
 
-        
-        localStorage.setItem("f_reserva",fecha.value)
-        localStorage.setItem("t_reserva",tipo_cancha.value)
+        let datos={
+            "fecha_reserva":fecha.value,
+            "tipo_reserva":tipo_cancha.value,
+        }
+        localStorage.setItem('datos',JSON.stringify(datos))
+        //mostrarCanchas();
        }
     }
+
+    //para acceder a lo guardado en el local
+    let datos=JSON.parse(localStorage.getItem('datos'));
 
     //llamar a la funcion para validar el formulario de busqueda
     formulario.addEventListener("submit",validationForm);
 
-    //Funcion para filtrar
+    //funcion para filtrar
     function filtrarPorTipoCancha(){
-      const tipoDeCanchaLeida = tipo_cancha.value //deberia ser el del local storage
-      const filtrados= canchasData.filter (cancha => cancha.tipo_cancha === tipoDeCanchaLeida)
-      
+    let tipoCanchasFiltradas= canchasData.filter(canchas2=> canchas2.tipo_cancha===datos.tipo_reserva)
+    mostrarCanchas(tipoCanchasFiltradas);
     }
 
+    //llamar a la funcion para filtrar
+    filtrarPorTipoCancha();
 
-
-
-
+    //funcion para cambiar el estado de la cancha de disponible a no disponible
+    function cambiarEstado() {
+       
+    }
+    
 });
