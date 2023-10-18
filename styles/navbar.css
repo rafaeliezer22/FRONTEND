@@ -1,5 +1,5 @@
 
-.navbar {
+/* .navbar {
     background-color: #4c4c4ef1;
     color: #fff;
     display: flex;
@@ -28,10 +28,10 @@
 
 .content {
     padding: 20px;
-}
+} */
 
 /* Estilos para los elementos del menú como botones de vidrio */
-.menu {
+/* .menu {
     list-style: none;
     padding: 0;
     display: flex;
@@ -43,10 +43,10 @@
     text-decoration: none;
     color: #a5a0a0;
     padding: 7px 20px;
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-}
+} */
 
 .menu a:hover {
     background-color: #706b6bd8; /* Fondo con transparencia al pasar el mouse */
@@ -260,4 +260,51 @@
 
     }
 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppi', 'arial';
+    box-sizing: border-box;
+}
+
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #eceaff;
+    color: #525252;
+}
+nav{
+    background-color: #1a1a1a;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+nav ul{
+    width: 100%;
+    text-align: right;
+}
+
+nav ul li{
+    display: inline-block;
 }
