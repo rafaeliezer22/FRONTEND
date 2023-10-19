@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { id: 12, nombre: "Cancha Tenis 4", precio: 2000, tipo_cancha: "Tenis", horario:"20hs",disponible: true },
     ];
     const canchasContainer = document.querySelector(".canchas-container");
+    const reserva_info = document.querySelector(".reserva-info");
     const reservaMessage = document.getElementById("reserva-message");
     const modal = document.getElementById("modal");
     const modalContent = document.getElementById("modal-content");
@@ -24,23 +25,57 @@ document.addEventListener("DOMContentLoaded", function () {
     let reservaCancha = null; // Almacena la cancha reservada actualmente
 
     // Función para mostrar las canchas en la página
+    // function mostrarCanchas(lista) {
+    //     canchasContainer.innerHTML = "";
+
+    //     lista.forEach(cancha => {
+    //         const canchaCard = document.createElement("div");
+    //         canchaCard.classList.add("cancha-card");
+
+    //         const estado = cancha.disponible ? "Disponible" : "No disponible";
+
+    //         canchaCard.innerHTML = `
+    //             <h2>${cancha.nombre}</h2>
+    //             <img src="https://images.vexels.com/media/users/3/146856/isolated/preview/d8bb6dc5ecf8241bd7e298e6883f715c-icono-de-campo-de-f-uacute-tbol-by-vexels.png" alt="Imagen de la cancha ${cancha.nombre}" width="200" height="150">
+    //             <p>Horario: ${cancha.horario}</p>
+    //             <p>Precio: $${cancha.precio} para reservar</p>
+    //             <p>Estado: ${estado}</p>
+    //             <button class="reservar-btn" data-id="${cancha.id}">Reservar</button>
+    //         `;
+
+    //         canchaCard.querySelector(".reservar-btn").addEventListener("click", () => {
+    //             if (cancha.disponible) {
+    //                 reservaCancha = cancha;
+    //                 mostrarModal();
+    //             } else {
+    //                 alert(`Lo siento, la Cancha ${cancha.nombre} no está disponible.`);
+    //             }
+    //         });
+
+    //         canchasContainer.appendChild(canchaCard);
+    //     });
+    // }
+
+
     function mostrarCanchas(lista) {
         canchasContainer.innerHTML = "";
-
+    
         lista.forEach(cancha => {
             const canchaCard = document.createElement("div");
             canchaCard.classList.add("cancha-card");
-
+    
             const estado = cancha.disponible ? "Disponible" : "No disponible";
+            const estadoColor = cancha.disponible ? "green" : "red"; // Color verde si está disponible, rojo si no
+    
             canchaCard.innerHTML = `
                 <h2>${cancha.nombre}</h2>
                 <img src="https://images.vexels.com/media/users/3/146856/isolated/preview/d8bb6dc5ecf8241bd7e298e6883f715c-icono-de-campo-de-f-uacute-tbol-by-vexels.png" alt="Imagen de la cancha ${cancha.nombre}" width="200" height="150">
                 <p>Horario: ${cancha.horario}</p>
                 <p>Precio: $${cancha.precio} para reservar</p>
-                <p>Estado: ${estado}</p>
+                <p style="color: ${estadoColor}">Estado: ${estado}</p>
                 <button class="reservar-btn" data-id="${cancha.id}">Reservar</button>
             `;
-
+    
             canchaCard.querySelector(".reservar-btn").addEventListener("click", () => {
                 if (cancha.disponible) {
                     reservaCancha = cancha;
@@ -49,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     alert(`Lo siento, la Cancha ${cancha.nombre} no está disponible.`);
                 }
             });
-
+    
             canchasContainer.appendChild(canchaCard);
         });
     }
-
+    
     // Función para mostrar la ventana modal
     function mostrarModal() {
         modal.style.display = "block";
@@ -70,10 +105,29 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Función para confirmar la reserva
+    // function confirmarReserva() {
+    //     reservaCancha.disponible = false;
+    //     mostrarMensajeReserva(reservaCancha);
+    //     cerrarModal();
+
+    // }
+
+    // Función para confirmar la reserva
     function confirmarReserva() {
-        reservaCancha.disponible = false;
+        reservaCancha.disponible = false; // Cambiar el estado a no disponible en la variable reservaCancha
         mostrarMensajeReserva(reservaCancha);
         cerrarModal();
+
+        // Actualizar el estado en el objeto canchasData
+        canchasData.forEach(cancha => {
+            if (cancha.id === reservaCancha.id) {
+                cancha.disponible = false;
+            }
+        });
+
+        // Volver a mostrar las canchas en el DOM con el estado actualizado
+        // mostrarCanchas(canchasData);
+        filtrarPorTipoCancha();
     }
 
     // Función para cancelar la reserva
@@ -94,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     //validamos el formulario
     const validationForm = (event) =>{
+
        let validation= true;
        if (fecha.value === ""){
             const p  = document.createElement("p");
@@ -111,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         localStorage.setItem('datos',JSON.stringify(datos))
         //mostrarCanchas();
+       
        }
     }
 
@@ -122,8 +178,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //funcion para filtrar
     function filtrarPorTipoCancha(){
-    let tipoCanchasFiltradas= canchasData.filter(canchas2=> canchas2.tipo_cancha===datos.tipo_reserva)
-    mostrarCanchas(tipoCanchasFiltradas);
+        let tipoCanchasFiltradas= canchasData.filter(canchas2=> canchas2.tipo_cancha===datos.tipo_reserva)
+        mostrarCanchas(tipoCanchasFiltradas);
     }
 
     //llamar a la funcion para filtrar
@@ -132,6 +188,13 @@ document.addEventListener("DOMContentLoaded", function () {
     //funcion para cambiar el estado de la cancha de disponible a no disponible
     function cambiarEstado() {
        
+    }
+
+
+    // Función para mostrar un mensaje de reserva
+    function mostrarMensajeReserva(cancha) {
+        reservaMessage.innerHTML = `Has reservado la ${cancha.nombre} por $${cancha.precio} por hora. ¡Disfruta de tu reserva!`;
+        reserva_info.style.display = "block";
     }
     
 });

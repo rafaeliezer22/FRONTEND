@@ -60,6 +60,7 @@
 
             <!--Formulario de reserva cliente-->
             <form action="" id="formulario_busqueda" >
+                
                 <label for="f_reserva">Fecha de reserva:</label>
                 <input type="date" id="f_reserva" name="fecha_reserva" min="2023-10-01" max="2023-10-31" >
             
@@ -73,16 +74,18 @@
             </form>
 
         </section>
+
+                <!-- AQUI MOSTRAMOS LA INFO DE LA RESERVA -->
+        <section class="reserva-info">
+            <!-- <h2>Detalles de la Reserva</h2> -->
+            <p id="reserva-message"></p>
+        </section>
          
         <section class="canchas-container">
             <!-- Aqui vamos a mostrar la canchas disponibles -->
         </section>
 
-        <!-- AQUI MOSTRAMOS LA INFO DE LA RESERVA -->
-        <section class="reserva-info">
-            <h2>Detalles de la Reserva</h2>
-            <p id="reserva-message"></p>
-        </section>
+
     </main>
 
     <!-- ventana modal ocultao -->
