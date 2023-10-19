@@ -38,11 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
     
             // Determinar la URL de la imagen en función del tipo de cancha
             if (cancha.tipo_cancha === "Fútbol") {
-                imagenURL = "imagen_de_futbol.png";
+                imagenURL = "../img/cancha_futbol_card.jpg";
             } else if (cancha.tipo_cancha === "Padel") {
-                imagenURL = "imagen_de_padel.png";
+                imagenURL = "../img/cancha_padel_card.jpg";
             } else if (cancha.tipo_cancha === "Tenis") {
-                imagenURL = "imagen_de_tenis.png";
+                imagenURL = "../img/cancha_tenis_card.jpg";
             }
     
             canchaCard.innerHTML = `
@@ -67,37 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
     
-    // function mostrarCanchas(lista) {
-    //     canchasContainer.innerHTML = "";
-    
-    //     lista.forEach(cancha => {
-    //         const canchaCard = document.createElement("div");
-    //         canchaCard.classList.add("cancha-card");
-    
-    //         const estado = cancha.disponible ? "Disponible" : "No disponible";
-    //         const estadoColor = cancha.disponible ? "green" : "red"; // Color verde si está disponible, rojo si no
-    
-    //         canchaCard.innerHTML = `
-    //             <h2>${cancha.nombre}</h2>
-    //             <img src="https://images.vexels.com/media/users/3/146856/isolated/preview/d8bb6dc5ecf8241bd7e298e6883f715c-icono-de-campo-de-f-uacute-tbol-by-vexels.png" alt="Imagen de la cancha ${cancha.nombre}" width="200" height="150">
-    //             <p>Horario: ${cancha.horario}</p>
-    //             <p>Precio: $${cancha.precio} para reservar</p>
-    //             <p style="color: ${estadoColor}">Estado: ${estado}</p>
-    //             <button class="reservar-btn" data-id="${cancha.id}">Reservar</button>
-    //         `;
-    
-    //         canchaCard.querySelector(".reservar-btn").addEventListener("click", () => {
-    //             if (cancha.disponible) {
-    //                 reservaCancha = cancha;
-    //                 mostrarModal();
-    //             } else {
-    //                 alert(`Lo siento, la Cancha ${cancha.nombre} no está disponible.`);
-    //             }
-    //         });
-    
-    //         canchasContainer.appendChild(canchaCard);
-    //     });
-    // }
     
     // Función para mostrar la ventana modal
     function mostrarModal() {
