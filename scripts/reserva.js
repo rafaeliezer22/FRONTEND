@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         modal.style.display = "block";
         modalContent.innerHTML = `
             <h2>Detalles de la Reserva</h2>
-            <p>Has reservado la ${reservaCancha.nombre} por $${reservaCancha.precio} por hora.</p>
+            <p>Has reservado la ${reservaCancha.nombre} por $${reservaCancha.precio}.</p>
             <button id="confirmar-btn">Confirmar/Pagar</button>
             <button id="cancelar-btn">Cancelar</button>
         `;
@@ -164,15 +164,9 @@ document.addEventListener("DOMContentLoaded", function () {
     //llamar a la funcion para filtrar
     filtrarPorTipoCancha();
 
-    //funcion para cambiar el estado de la cancha de disponible a no disponible
-    function cambiarEstado() {
-       
-    }
-
-
     // Función para mostrar un mensaje de reserva
     function mostrarMensajeReserva(cancha) {
-        reservaMessage.innerHTML = `Has reservado la ${cancha.nombre} por $${cancha.precio} por hora. ¡Disfruta de tu reserva!`;
+        reservaMessage.innerHTML = `Has reservado la ${cancha.nombre} por $${cancha.precio}. ¡Disfruta de tu reserva!`;
         reserva_info.style.display = "block";
     }
     
