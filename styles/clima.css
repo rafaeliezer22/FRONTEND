@@ -4,7 +4,6 @@
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #dfd7d7;
     margin: 0;
     padding: 0;
 }
@@ -54,9 +53,9 @@ body {
 }
 
 .weather-icon img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 150%;
+    height: 120%;
+    /* border-radius: 50%; */
     margin: 0;
     padding: 0;
 }
@@ -68,7 +67,7 @@ body {
 
 
 .temperature p {
-    font-size: 30px;
+    font-size: 33px;
     font-weight: bold;
     margin: 0;
 

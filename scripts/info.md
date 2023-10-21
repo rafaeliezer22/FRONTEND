@@ -1,1 +1,1 @@
- archivos .js con implementación de fetching.
+ archivos .js con implementación de fetchingy otras funciones.
