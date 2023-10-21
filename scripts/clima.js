@@ -2,14 +2,14 @@
 // -*- coding: utf-8 -*-
 
 const api = {
-    key: '9e122cd782b2d0333f5fe4e7fa192062',
+    key: '9e122cd782b2d0333f5fe4e7fa192062', 
     url: `https://api.openweathermap.org/data/2.5/weather`
 }
 
-const cityName = document.getElementById('city-name');
-const weatherIcon = document.getElementById('weather-icon');
-const temperature = document.getElementById('temperature');
-const weatherDescription = document.getElementById('weather-description');
+const cityName = document.querySelector('#city-name');
+const weatherIcon = document.querySelector('#weather-icon');
+const temperature = document.querySelector('#temperature');
+const weatherDescription = document.querySelector('#weather-description');
 const temp_min = document.querySelector("#temp-min");
 const temp_max =document.querySelector("#temp-max");
 const weather_info = document.querySelector('.weather-info');
@@ -67,14 +67,14 @@ function getWeatherByCoordinates(lat, lon) {
 // Func para mostrar los datos del clima en la página
 function displayWeatherData(data) {
     cityName.textContent = data.name;
+    weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     temperature.textContent = `${Math.round(data.main.temp - 273.15)}°C`;
-    // weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     weatherDescription.textContent = data.weather[0].description;
     temp_min.textContent = `${Math.round(data.main.temp_min - 273.15)}°C / `;
     temp_max.textContent = `${Math.round(data.main.temp_max - 273.15)}°C`;
 
     // Modifica el fondo con una imagen
-    weather_info.style.backgroundImage = `URL(https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`;
+    // weather_info.style.backgroundImage = `URL(https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png)`;
 
 }
 
