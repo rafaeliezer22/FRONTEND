@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos - Inscripción abierta</title>
+    <link rel="stylesheet" href="../styles/torneo_inscripcion_abierta.css">
+</head>
+<body>
+    <header>
+        <h1>Reserva de Canchas</h1>
+    </header>
+    <main>
+      <!--<section class="formulario_torneoabierto">
+            
+            <form action="" >
+                <label for="t_reserva">Deporte:</label>
+                <select id="t_reserva" name="cancha_reserva">
+                    <option value="futbol">Futbol</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="padel">Padel</option>
+                </select>
+
+                <label for="f_torneoabierto">Fecha de reserva:</label>
+                <input type="date" id="f_torneoabierto" name="fecha_reserva" min="2023-10-01" max="2023-10-31" >
+                           
+                <input type="submit" value="Buscar canchas">
+            </form>
+
+        </section>-->
+         
+        <section class="canchas-container">
+            <!-- Aqui vamos a mostrar la canchas disponibles -->
+        </section>
+
+        <!-- AQUI MOSTRAMOS LA INFO DE LA RESERVA -->
+        <section class="reserva-info">
+            <h2>Detalles de la Reserva</h2>
+            <p id="reserva-message"></p>
+        </section>
+    </main>
+
+    <!-- ventana modal ocultao -->
+    <div id="modal" class="modal">
+        <div id="modal-content" class="modal-content">
+            <!-- Contenido de la ventana modal se generará dinámicamente en JavaScript -->
+        </div>
+
+    </div>
+    
+    
+    <footer>
+        <!-- ME GUSTO EL EJEMPLO DE CRIS Y LO AGREGAMOS EN EL FOOTER -->
+        <p>&copy; 2023 Reserva de Canchas</p>
+    </footer>
+    <script src="../scripts/reserva.js"></script>
+
+
+</div>
+</body>
+</html>
