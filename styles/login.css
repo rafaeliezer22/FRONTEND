@@ -156,10 +156,10 @@ input {
 .input-container label {
     position: absolute;
     top: 50%;
-    left: 10px; /* Ajusta la posición horizontal según tus preferencias */
+    left: 10px; 
     transform: translateY(-50%);
-    color: #888; /* Cambia el color del texto para que parezca un marcador de posición */
-    pointer-events: none; /* Evita que la etiqueta interfiera con la interacción del usuario */
+    color: #888; 
+    pointer-events: none; 
     transition: transform 0.2s ease, opacity 0.2s ease;
 
 }
@@ -170,6 +170,7 @@ input {
     opacity: 0.8;
 }
 
+
 #register-birthdate{
     color: rgba(0, 0, 0, 0);
 }
@@ -177,6 +178,11 @@ input {
 .input-container{
     font-size: small;
 }
+
+/* .input-container i {
+    display: block; 
+    margin-right: 1px; 
+} */
 
 
 .team-button {
