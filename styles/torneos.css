@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&family=Bree+Serif&family=Playpen+Sans:wght@300&display=swap');
 body::before {
     content: "";
     background-image: url(../img/pasto_sintetico.jpg);
@@ -95,12 +96,12 @@ section {
     border-radius: 5px;
 }
 
-h2 {
+h2{
     font-size: 20px;
     color: #fff;
 }
 
-p {
+p ,ul,li {
     font-size: 16px;
     color: #ccc;
 }
@@ -172,9 +173,10 @@ a:hover {
 
 .carousel{
     background-color: transparent;
-    border-radius: 5%;
+    position: relative;
+    max-width: 100%;
 }
-
+/* 
 .carousel-item.active,.carousel-item {
     position: relative;
 }
@@ -183,19 +185,43 @@ a:hover {
     position: absolute;
     bottom: 3%;
     left: 3%;
+    background-color: #ffffff5d;
+}*/
+
+.texto_carousel{
+    bottom: 3%;
+    left: 3%;
+    background-color: #ffffff5d;
+    text-align: center;
+}
+
+.carousel-item {
+    min-width: 100%;
+    flex: 0 0 auto;
+
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
 }
 
 #titulo_carousel{
     font-size: 20px;
-    color: #fff;
+    color: black;
     font-weight: bold;
+    font-family: 'ABeeZee', sans-serif;
+}
 
+.carousel-container {
+    display: flex;
+    
 }
 
 /* Estilo de header con animacion */
 h1{
     display: inline-block;
-    
+    font-family: 'ABeeZee', sans-serif;
 }
 
 #pelota{
